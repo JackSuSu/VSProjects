@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19值类型和引用类型"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20序列化与反序列化", "20序列化与反序列化\20序列化与反序列化.csproj", "{413A16E9-4D44-4EBE-A407-1C1A7E7BF5D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21接口", "21接口\21接口.csproj", "{7D746A12-88ED-4B5C-87E7-66ED39BCAA20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{413A16E9-4D44-4EBE-A407-1C1A7E7BF5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{413A16E9-4D44-4EBE-A407-1C1A7E7BF5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{413A16E9-4D44-4EBE-A407-1C1A7E7BF5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D746A12-88ED-4B5C-87E7-66ED39BCAA20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D746A12-88ED-4B5C-87E7-66ED39BCAA20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D746A12-88ED-4B5C-87E7-66ED39BCAA20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D746A12-88ED-4B5C-87E7-66ED39BCAA20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
