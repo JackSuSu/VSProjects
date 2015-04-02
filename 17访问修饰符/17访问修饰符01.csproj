@@ -67,6 +67,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\17访问修饰符02\17访问修饰符02.csproj">
+      <Project>{ef4608e8-c607-48bf-b8da-4730fa2cf629}</Project>
+      <Name>17访问修饰符02</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
