@@ -18,7 +18,9 @@ namespace _17访问修饰符
         /// 
         /// protect：只能在自身或者子类中使用
         /// 
-        /// internal:
+        /// internal:只有程序集本身可以访问
+        /// 
+        /// protected internall 共五个访问修饰符
         /// 
         /// 能修饰类的修饰符只有public 和 internal
         /// 
@@ -28,19 +30,55 @@ namespace _17访问修饰符
         /// 
         /// 不同程序集中：继承类的protected的修饰级别 可以传递跨程序集
         /// 
+        /// 可访问性不一致
+        /// 
+        /// 子类的访问的权限不能高于父类的访问权限
         /// 
         /// </summary>
         /// <param name="args"></param>
 
         static void Main(string[] args)
         {
-           
 
-            
+            Test test = new Test();
+
+            if (test.NullData == null)
+            {
+                Console.WriteLine("NUllData 是没有赋值的类型！");
+            }
+            else
+            {
+                Console.WriteLine("NullData 赋值了！");
+            }
+
+            Console.ReadKey();
+
          }
+
+
+
     }
 
 
+    public class Test : Student
+    {
+        public void showdata()
+        {
+            _name = string.Empty;
+        }
+    }
+
+
+
+    public class Parent
+    {
+ 
+    }
+
+    public class Child : Parent
+    {
+ 
+    }
 
 
 
