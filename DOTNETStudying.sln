@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22接口联系1", "22接口
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23接口练习2", "23接口练习\23接口练习2.csproj", "{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24收银台", "24收银台\24收银台.csproj", "{5A0522C6-B466-4DCF-A161-A1F88356B1DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0522C6-B466-4DCF-A161-A1F88356B1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0522C6-B466-4DCF-A161-A1F88356B1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0522C6-B466-4DCF-A161-A1F88356B1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0522C6-B466-4DCF-A161-A1F88356B1DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
