@@ -35,7 +35,7 @@ namespace _20序列化与反序列化
 
             //写到本地磁盘 然后 从本地磁盘读取
 
-            //using (FileStream fs = new FileStream(@"C:\Users\sulongfeng\Desktop\111.txt",FileMode.OpenOrCreate, FileAccess.Write))
+            //using (FileStream fs = new FileStream(@"C:\Users\jack\Desktop\111.txt", FileMode.OpenOrCreate, FileAccess.Write))
             //{
 
             //    BinaryFormatter bf = new BinaryFormatter();
@@ -50,7 +50,7 @@ namespace _20序列化与反序列化
             //接受来自硬盘的序列化 二进制数据
 
 
-            using (FileStream fsread = new FileStream(@"C:\Users\sulongfeng\Desktop\111.txt", FileMode.OpenOrCreate, FileAccess.Read))
+            using (FileStream fsread = new FileStream(@"C:\Users\jack\Desktop\111.txt", FileMode.OpenOrCreate, FileAccess.Read))
             {
 
                 BinaryFormatter bf = new BinaryFormatter();
@@ -58,6 +58,9 @@ namespace _20序列化与反序列化
                 Person p2 = (Person)bf.Deserialize(fsread);
 
                 Console.WriteLine(p2.Name + p2.Age + p2.Gender);
+
+
+
 
             }
 
