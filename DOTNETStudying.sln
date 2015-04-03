@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21接口", "21接口\21接�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21部分类和密封类", "21部分类\21部分类和密封类.csproj", "{045A15B2-E6F9-4DE4-A6BB-5470496FCA72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22接口联系", "22接口联系\22接口联系.csproj", "{40FB5A8F-EFD9-4A65-94A9-076DF3499F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "23接口练习", "23接口练习\23接口练习.csproj", "{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,14 @@ Global
 		{045A15B2-E6F9-4DE4-A6BB-5470496FCA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{045A15B2-E6F9-4DE4-A6BB-5470496FCA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{045A15B2-E6F9-4DE4-A6BB-5470496FCA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FB5A8F-EFD9-4A65-94A9-076DF3499F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FB5A8F-EFD9-4A65-94A9-076DF3499F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FB5A8F-EFD9-4A65-94A9-076DF3499F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FB5A8F-EFD9-4A65-94A9-076DF3499F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02B9E8C-0E9A-48D2-80EC-35C6C648BA56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
