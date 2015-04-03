@@ -41,10 +41,52 @@ namespace _23接口练习
         static void Main(string[] args)
         {
 
+            //真的鸭子会游泳 木头鸭子不会游泳 橡皮鸭子会游泳（侧重能力用接口）
+
+            ISwimming sw = new RealDuck();
+
+            sw.Swim();
+
+            ISwimming sw2 = new XPDuck();
+
+            sw2.Swim();
+
+            Console.ReadKey();
+
         }
 
 
+        public class RealDuck:ISwimming
+        {
 
+            public void Swim()
+            {
+                Console.WriteLine("真的鸭子会游泳！");
+            }
+        }
+
+
+        public class MuDuck
+        {
+ 
+        }
+
+
+        public class XPDuck :  ISwimming
+        {
+
+            public void Swim()
+            {
+                Console.WriteLine("橡皮鸭子飘着游泳！");
+            }
+        }
+
+
+        public interface ISwimming
+        {
+            void Swim();
+
+        }
 
     }
 }
