@@ -19,6 +19,11 @@ namespace _24收银台
         static void Main(string[] args)
         {
 
+            SupperMarket spm = new SupperMarket();
+
+            spm.AskBuying();
+
+            Console.ReadKey();
         }
 
     }

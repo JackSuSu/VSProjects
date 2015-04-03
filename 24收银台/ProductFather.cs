@@ -16,13 +16,7 @@ namespace _24收银台
             set { myVar = value; }
         }
 
-        private int _count;
-
-        public int Count
-        {
-            get { return _count; }
-            set { _count = value; }
-        }
+     
 
         private string  _id;
 
@@ -41,13 +35,13 @@ namespace _24收银台
         }
         
 
-        public ProductFather(string id,double price,int count,string name)
+        public ProductFather(string id,double price,string name)
         {
             this.ID=id;
 
             this.Price=price;
 
-            this.Count=count;
+        
 
             this.Name = name;
 
@@ -59,8 +53,8 @@ namespace _24收银台
 
     class Sumngs:ProductFather
     {
-        public Sumngs(string id, double price, int count,string name)
-            : base(id, price, count,name)
+        public Sumngs(string id, double price,string name)
+            : base(id, price,name)
         {
  
         }
@@ -75,8 +69,8 @@ namespace _24收银台
 
     class Acer : ProductFather
     {
-        public Acer(string id, double price, int count,string name)
-            : base(id, price, count,name)
+        public Acer(string id, double price,string name)
+            : base(id, price,name)
         {
 
         }
@@ -90,8 +84,8 @@ namespace _24收银台
 
     class Banana : ProductFather
     {
-        public Banana(string id, double price, int count, string name)
-            : base(id, price, count, name)
+        public Banana(string id, double price, string name)
+            : base(id, price, name)
         {
 
         }
@@ -106,11 +100,13 @@ namespace _24收银台
 
     class JiangYou : ProductFather
     {
-        public JiangYou(string id, double price, int count,string name)
-            : base(id, price, count, name)
+        public JiangYou(string id, double price,string name)
+            : base(id, price, name)
         {
 
         }
+
+
     }
 
 

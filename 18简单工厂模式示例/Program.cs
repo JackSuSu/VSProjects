@@ -18,9 +18,11 @@ namespace _18简单工厂模式示例
     /// 抽象多态 实现 父类是抽象出来的笔记本，子类重写父类的方法实现多态
     /// 
     /// 
+    /// 打折：各种折扣 父类--子类
     /// 
     /// 
     /// </summary>
+    
     class Program
     {
         static void Main(string[] args)
