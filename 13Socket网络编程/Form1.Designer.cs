@@ -34,6 +34,8 @@
             this.txtPort = new System.Windows.Forms.TextBox();
             this.txtLog = new System.Windows.Forms.TextBox();
             this.txtIp = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -77,7 +79,7 @@
             this.txtLog.Location = new System.Drawing.Point(85, 168);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
-            this.txtLog.Size = new System.Drawing.Size(612, 344);
+            this.txtLog.Size = new System.Drawing.Size(612, 137);
             this.txtLog.TabIndex = 5;
             // 
             // txtIp
@@ -88,15 +90,35 @@
             this.txtIp.TabIndex = 6;
             this.txtIp.Text = "192.168.102.222";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(85, 353);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(612, 137);
+            this.textBox1.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(622, 520);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 49);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "发送";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 610);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPort);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtLog);
             this.Controls.Add(this.txtIp);
             this.Name = "Form1";
@@ -115,6 +137,8 @@
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.TextBox txtIp;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
 
     }
 }

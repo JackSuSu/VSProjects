@@ -141,6 +141,16 @@ namespace _13Socket网络编程
 
             //只能一个客户端 写在一个循环里面
 
+            //统计在线人数 使用的是 集合类型的 变量 存储数据让后进行统计
+
+            //不同类型的文件怎么办？？
+
+            //自己制作协议 “自定义协议”
+
+            //把传输的字节数组之前 加上相应的二进制字符（这样可以代表不同的数据类型 比如：文件，图片，消息等等）
+
+            //然后把相应的文件存储为相应的文件或者消息
+
             while(true)
             {
 
@@ -194,11 +204,14 @@ namespace _13Socket网络编程
         /// </summary>
         /// <param name="sw"></param>
 
+
+        Socket socksends;
+
         private void ReciveData(object sw)
         {
 
 
-            Socket socksend = (Socket)sw;
+            socksends = (Socket)sw;
 
             byte[] bufffer = new byte[1024 * 1024 * 2];
 
@@ -208,7 +221,7 @@ namespace _13Socket网络编程
                 try
                 {
 
-                    int realByte = socksend.Receive(bufffer);
+                    int realByte = socksends.Receive(bufffer);
 
                     if (realByte == 0)
                     {
@@ -217,7 +230,7 @@ namespace _13Socket网络编程
 
                     string gedata = Encoding.UTF8.GetString(bufffer, 0, realByte);
 
-                    ShowMsg(socksend.RemoteEndPoint.ToString() + ":" + gedata);
+                    ShowMsg(socksends.RemoteEndPoint.ToString() + ":" + gedata);
 
                 }
                 catch
@@ -241,5 +254,25 @@ namespace _13Socket网络编程
         {
             Control.CheckForIllegalCrossThreadCalls = false;
         }
+
+
+        /// <summary>
+        /// 
+        /// 服务端给客户端发送消息
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            byte[] buffer = Encoding.UTF8.GetBytes(textBox1.Text);
+
+            socksends.Send(buffer);
+
+        }
+
+
+
     }
 }
