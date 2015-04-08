@@ -122,6 +122,7 @@ namespace _15GDI_
 
             Point p1 = new Point(30, 50);
 
+
             Point p2 = new Point(250, 250);
 
             Rectangle rec = new Rectangle(new Point(50, 50), new Size(50, 50));
