@@ -125,7 +125,7 @@ namespace _15GDI_
 
             Point p2 = new Point(250, 250);
 
-            Rectangle rec = new Rectangle(new Point(50, 50), new Size(50, 50));
+            Rectangle rec = new Rectangle(new Point(50, 50), new Size(80, 80));
 
             g.DrawPie(pennew, rec, 100, 200);
         }
@@ -134,7 +134,85 @@ namespace _15GDI_
         {
             Graphics gg = this.CreateGraphics();
 
+            string paintstr = "12315";
+
+            Font ft = new Font("宋体", 10, FontStyle.Italic);
+
+            PointF pt = new PointF();
+
+            Rectangle rec = new Rectangle(new Point(50, 50), new Size(50, 50));
+
+            gg.DrawString(paintstr, ft, Brushes.Red, rec);
+
             //gg.DrawString("1585",new Font(new FontFamily("宋体"),FontStyle.Bold),Brushes.Red,new PointF()); 
+        }
+
+
+        /// <summary>
+        /// 
+        /// 操作系统 都是位图；
+        /// 
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            Random r = new Random();
+
+           int ramNum=  r.Next(10000, 99999);
+
+           Bitmap bmp = new Bitmap(200,50);
+
+
+            //Graphic向位图上 画图片
+
+            //向指定的图片画新的图像
+
+           Graphics g = Graphics.FromImage(bmp);
+
+            //将图片显示到PictureBox
+
+           Color[] colors = { Color.Red, Color.Blue, Color.Gray, Color.DarkCyan, Color.Black };
+
+            Font ft=new Font("宋体", 15,FontStyle.Bold);
+
+
+            string rastr = ramNum.ToString();
+
+            for (int i = 0; i < rastr.Length; i++)
+            {
+                g.DrawString(rastr[i].ToString(),ft, new SolidBrush(colors[r.Next(0,colors.Length)]), new PointF(i*20+30,20));
+
+            }
+
+
+            for (int i = 0; i < 50; i++)
+            {
+                Point p1=new Point(r.Next(0,bmp.Width),r.Next(0,bmp.Height));
+
+                Point p2=new Point(r.Next(0,bmp.Width),r.Next(0,bmp.Height));
+
+                g.DrawLine(new Pen(Brushes.Green), p1, p2);
+
+            }
+
+            for (int i = 0; i < 500; i++)
+            {
+
+                Point pt = new Point(r.Next(0, bmp.Width), r.Next(0, bmp.Height));
+
+                bmp.SetPixel(pt.X, pt.Y, colors[r.Next(0, colors.Length)]);
+
+            }
+           
+
+           pictureBox1.Image = bmp;
+
+
         }
     }
 }
