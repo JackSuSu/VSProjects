@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body bgcolor="gray"  text="black" link="green" alink="Black" vlink="blue">
+    <!--background="1.jpg"-->
+    <hr />
+
+    <h3>Body 中的属性</h3>
+
+   <p>Body中 Text 设置颜色</p>
+
+    <p>link设置连接的默认颜色，alink 鼠标移入的颜色，vlink 点击后的颜色</p>
+
+    <p>bgcolor 设置背景色</p>
+
+    <p>background 设置背景图 平铺</p>       
+
+    <hr />
+
+
+    <h3>HTML 列表</h3>
+
+    <table border="1">
+        <tr>
+            <td><p>无序列表</p></td>
+            <td><p>有序列表</p></td>
+            <td><p>自定义列表</p></td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <ul type="square">
+                    <li>星期一</li>
+                    <li>星期二</li>
+                </ul>
+            </td>
+
+            <td>
+                <ol type="A">
+                    <li>星期一</li>
+                    <li>星期二</li>
+                </ol>
+            </td>
+
+            <td>
+
+                <dl>
+                    <dt>面向对性</dt>
+                    <dd>封装</dd>
+                  
+                    <dt>循环使用</dt>
+                    <dd>for</dd>
+                    <dd>while</dd>
+                   
+                </dl>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <hr />
+
+    <h3>HTML 表格</h3>
+
+    <table cellpadding="10px" border="1">
+
+        <tr>
+            <td>第1列</td>
+            <td>第2列</td>
+            <td>第3列</td>
+            <td>第4列</td>            
+        </tr>
+
+        <tr>
+
+            <td>1111</td>
+
+            <td>张三</td>
+
+            <td>男</td>
+
+            <td>山东</td>
+
+        </tr>
+
+      
+
+
+        <tr>
+
+            <td colspan="4">CellPadding 设置文本与文本的距离 colspan 跨列</td>
+
+            
+
+        </tr>
+
+
+        <tr>
+
+            <td rowspan="2">跨行显示 rowspan</td>
+
+            <td>李四</td>
+
+            <td>男</td>
+
+            <td>江苏</td>
+
+        </tr>
+
+
+        <tr>
+
+      
+
+            <td>李四</td>
+
+            <td>男</td>
+
+            <td>江苏</td>
+
+        </tr>
+
+    </table>
+
+
+
+    <hr />
+
+    <h3>HMTL 表单的使用 （向服务器传输数据）</h3>
+
+    <form action="http://www.baidu.com" method="get">
+
+        用户名:<input name="username" type="text" /><br />
+
+        密码:<input name="pwd" type="password" /><br />
+
+        <input type="submit" value="提交到" />
+
+        <input type="reset" value="清空" />
+
+
+        <fieldset>
+
+            <legend>性别</legend>
+
+            <input type="radio" name="Sex" />男
+
+            <input type="radio" name="Sex" />女
+
+        </fieldset>
+
+        <fieldset>
+
+        <legend>婚姻状况</legend>
+
+        <input type="radio" name="M" />已婚
+
+        <input type="radio" name="M" />未婚
+
+        </fieldset>
+
+        <select size="1">
+
+            <optgroup label="中国">
+
+                <option>河北省</option>
+                <option>湖北省</option>
+                <option>湖男省</option>
+
+            </optgroup>
+
+            <optgroup label="美国">
+                <option>纽约</option>
+                <option>德克萨斯</option>
+                <option>弗罗里达</option>
+            </optgroup>
+
+
+           
+        </select>
+
+        <input type="file" value="添加文件" />
+        <br />
+
+        <textarea >
+            合同
+        </textarea>
+
+
+    </form>
+
+
+    <p>Form get 以地址栏的方式提交</p>
+
+    <p>Form 中所有的类型为Input 但是类型不一样 text/radiobutton/submit/reset</p>
+
+    <p>Form name 属性最终提交给服务器的地址栏内容，服务器识别 name 获取相应的值</p>
+
+    <p>Form 中RadioButton 使用单选框 选中一个 使用相同的name 即可，同时只能提交给服务器一个数值</p>
+
+    <p>Form FeildSet 进行表单分类</p>
+
+    <p>Form Select 使用 Size Option </p>
+
+
+    <hr />
+
+    <h3>HMTL DIV和Span的使用</h3>
+
+
+    <div style="background:red;height:50px;width:500px;">
+        我是一个DIV，一呀咿呀哟
+    </div>
+
+    <b>我就在DIV后面</b>
+
+    <span>我是一个Span标签</span><b>我就在Span后面</b>
+
+    <p>DIV 层级 独占一行 只允许自己在里面，及时设置了宽度后面的文本也无法填充过去</p>
+
+    <p>Span通常设置DIV内字体</p>
+
+    <p>DIV+Span DIV用于布局页面，Span用于显示样式</p>
+
+    <p>DIV FeildSet 进行表单分类</p>
+
+    <p>DIV FeildSet 进行表单分类</p>
+
+
+    <a href="#" name="DDDD">低端位置</a>
+
+
+
+</body>
+</html>
