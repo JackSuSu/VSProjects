@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSSHTML.html" />
+    <Content Include="CSS选择器.html" />
     <Content Include="Home.html" />
     <Content Include="HtmlFrame.html" />
     <Content Include="Register.html" />
