@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript">
+
+        //  alert(new Date().toLocaleString());
+
+
+
+        function func2()
+        {
+
+            var index = 10;
+
+            index = 0;
+
+            for (var i = 0; i < 100; i++) {
+
+                index = index + i;
+
+            }
+
+            index = "转化成了String";
+
+      
+
+            var show = document.getElementById("showinfo");
+
+            show.innerHTML = "你点击了我" + index.toString();
+
+            var x;
+            
+            if (x == null)
+            {
+                show.innerHTML = show.innerHTML + "X的值为Null";
+            }
+
+            if (typeof (x) == 'undefined')
+            {
+                show.innerHTML = show.innerHTML + "X的未定义";
+            }
+
+            x = "123";
+
+            if (x) {
+                alert('X被初始化了 或者不为空 或者不为0');
+            } else
+            {
+                alert('X 值没有初始化！');
+            }
+
+            var showinfo2 = document.getElementById("showinfo2");
+
+            showinfo2.innerHTML ="函数的使用："+ add(10, 23);
+
+            //匿名函数
+
+            var fuc3 = function (data1, data2)
+            {
+                return data1 + data2;
+            }
+
+
+            var datadd = fuc3(100, 50);
+
+            var showinfo3 = document.getElementById("showinfo3");
+
+            showinfo3.innerHTML = "匿名函数:" + datadd;
+            //show.innerHTML = index + j;
+
+            var showinfo4 = document.getElementById("showinfo4");
+
+            //声明一个匿名函数 直接使用
+
+            showinfo4.innerHTML = "声明匿名函数并且直接使用" + function (data1, data2) { return data1 + data2; }(25, 89);
+
+            var showinfo5 = document.getElementById("showinfo5");
+
+            function Person(name, age)
+            {
+                this.Name = name;
+
+                this.Age = age;
+
+                this.SayHello = function () { showinfo5.innerHTML = "模拟面向对象:" + this.Name + this.Age; }
+
+            }
+
+            var p1 = new Person("Tom", "20"); //不能丢掉New 否则就变成了 调用函数
+
+            p1.SayHello();
+
+
+            var showinfo6 = document.getElementById("showinfo6");
+
+            var names = new Array();
+
+            names[0] = "1";
+
+            names[1] = "2";
+
+            names[2] = "3";
+
+            names[3] = "4";
+
+          var sum= function () {
+
+                var str;
+
+                for (var i = 0; i < names.length; i++) {
+                    str += names[i];
+                }
+
+                return str;
+            }
+
+
+          showinfo6.innerText = "数组的使用" + sum();
+
+          var dict = new Array();
+
+          dict["人"] = "ren";
+
+          dict["口"] = "Kou";
+
+          dict["手"] = "Show";
+
+          var showinfo7 = document.getElementById("showinfo7");
+
+          showinfo7.innerHTML = "数组模拟Dictionary 键值对:" + dict["人"] + dict["口"];
+          
+          var showinfo8 = document.getElementById("showinfo8");
+
+          showinfo8.innerHTML = "For循环的使用doc中的所有成员，因为对象的成员，就是以对象的Key出现(和C# Foreach类似)！";
+
+          for (var data in document) {
+
+              showinfo8.innerText += data+"<Br />";
+
+          }
+
+
+          var p3 = new Object();
+
+          p3.Name = "张三";
+
+          p3.Age = 19;
+
+          p3.SayHi = function () { alert("P3 说Hi") };
+
+
+          p3.SayHi();
+            
+
+          for (var item in p3) {
+              alert(item);
+          }
+
+
+        }
+
+
+
+        function add(n1, n2)
+        {
+            return n1 + n2;
+        }
+
+
+    </script>
+
+    <script src="js01.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <p>第一行</p>
+
+    <script type="text/javascript">
+        
+        //alert("第一行");
+
+    </script>
+
+    <p>第二行</p>
+
+    <script type="text/javascript">
+
+     //   alert("第二行");
+
+    </script>
+
+    <p id="showinfo">第三行</p>
+
+    <script type="text/javascript">
+
+
+      //  alert("第三行");
+
+    </script>
+
+    <input type="button" onclick="func2()"  value="点击" />
+
+    <a href="javascript:alert('Hello')">点击执行</a>
+
+    <a href="http://www.baidu.com" onclick="alert('进入百度')">点击</a>
+
+    <p id="showinfo2">显示信息</p>
+
+    <p id="showinfo3">显示信息</p>
+
+    <p id="showinfo4">显示信息</p>
+
+    <p id="showinfo5">显示信息</p>
+
+    <p id="showinfo6">显示信息</p>
+
+    <p id="showinfo7">显示信息</p>
+
+    <p id="showinfo8">显示信息</p>
+
+    <p id="showinfo9">显示信息</p>
+
+   
+</body>
+</html>
