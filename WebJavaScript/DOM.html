@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript">
+
+
+       
+
+        function ShowLocation()
+        {
+            var showinfo1 = document.getElementById("showinfo1");
+
+            showinfo1.innerText = location.href;
+
+        }
+
+        function DirectToPage()
+        {
+
+            location.href = 'http://www.baidu.com';
+
+            window.event.returnValue = false;
+        }
+
+        function RefreshData()
+        {
+            window.location.reload();
+        }
+
+        function EventData()
+        {
+            if (window.event.ctrlKey)
+            {
+                var showinfo2 = document.getElementById("showinfo2");
+
+                showinfo2.innerText = "您收按下Trl键了<" + window.event.clientX + "|" + window.event.clientY + "><" + screenX + "|" + screenY + ">" + window.event.returnValue;
+            }
+        }
+
+        function RetuToBaidu()
+        {
+            window.event.returnValue = false;
+        }
+
+
+        function CheckData()
+        {
+            alert("数据有问题！");
+        }
+
+        function MouseDownBody()
+        {
+            var showinfo3 = document.getElementById("showinfo3");
+
+            showinfo3.innerText = "鼠标滚轮中键点击";
+        }
+
+        function MouseOver()
+        {
+            var showinfo4 = document.getElementById("showinfo4");
+
+            showinfo4.innerText = "鼠标经过了";
+        }
+
+        function MouseOut()
+        {
+
+            var showinfo4 = document.getElementById("showinfo4");
+
+            showinfo4.innerText = "鼠标走了";
+
+        }
+
+        function MouseMove() {
+
+            var showinfo4 = document.getElementById("showinfo4");
+
+            showinfo4.innerText = "鼠标在移动";
+
+        }
+
+
+        function DymicEvent() {
+
+            var showinfo5 = document.getElementById("showinfo5");            
+
+            showinfo5.innerText = "动态加载按钮事件";
+
+        }
+
+
+        function ConfirmDemo() {
+
+            var showinfo6 = document.getElementById("showinfo6");
+
+            if (confirm("是否进入?")) {
+
+
+                showinfo6.innerText = "Confrim确定,查看标题栏";
+            } else {
+                showinfo6.innerText = "Confrim取消，查看标题栏";
+            }
+
+         
+            document.title = showinfo6.innerHTML;
+
+        }
+
+        function WindowsNaviga()
+        {
+            window.navigate("/DefaultDOC.html");
+
+           
+         
+        }
+
+       
+
+
+        function ShowInfo() {
+            
+            var showinfo7 = document.getElementById("showinfo7");
+          
+            var data = showinfo7.innerText;
+
+            showinfo7.innerText = data++;
+
+            alert(data);
+
+
+        }
+
+        var intalid;
+
+        function setintervalData()
+        {         
+
+            intalid=setInterval("alert('Hello')", 5000);
+        }
+
+        function OnloadEvent()
+        {
+            var showinfo8 = document.getElementById("showinfo8");
+
+            showinfo8.innerHTML = "Onload事件 当加载完页面元素后显示内容！Html JavaScript 是解释执行的";
+        }
+
+        function UnOnload()
+        {
+            var showinfo10 = document.getElementById("showinfo10");
+
+            showinfo10.innerHTML = "当窗体Unload执行时候";
+
+            alert("走了");
+        }
+
+        function ConfirmLeve()
+        {
+            if (!confirm("是否退出该网页？")) {
+
+                window.event.returnValue = false;
+
+            }
+        }
+
+        function ShowScreenPix()
+        {
+            var showinfo11 = document.getElementById("showinfo11");
+
+            showinfo11.innerHTML = screen.width + "*" + screen.height;
+
+           
+
+            //alert("走了");
+        }
+
+        function SetClipBord()
+        {
+            var txtContent = document.getElementById("txtContent");
+
+            clipboardData.setData('Text', txtContent.value);
+
+            document.write("<p>"+Date().toString()+"</p>")
+
+        }
+
+        function DocWrite()
+        {
+            document.write("HelloWrold");
+        }
+
+        function FormSet()
+        {
+            var showinfo12 = document.getElementById("showinfo12");
+
+            showinfo12.innerHTML = form1.txtContent.value;
+        }
+
+        function GetElementUseName()
+        {
+            var radiaos = document.getElementsByName("gender");
+
+            var showinfo13 = document.getElementById("showinfo13");
+
+            for (var i = 0; i < radiaos.length; i++) {
+
+                showinfo13.innerText += radiaos[i].value;
+            }
+        }
+
+
+    </script>
+
+</head>
+<body onbeforeunload="ConfirmLeve()" onload="OnloadEvent()" onunload="UnOnload()" onmouseover="MouseOver()" onmousemove="MouseMove()" onmouseout="MouseOut()" onmousedown="MouseDownBody()">
+    <input type="button" onclick="ShowLocation()"  value="显示当前页面地址" />
+
+    <input type="button" onclick="DirectToPage()" value="重定向到Baidu" />
+
+    <input type="button" onclick="RefreshData()" value="刷新当前页面" />
+
+    <br />
+
+    <input type="button" value="Event事件" onclick="EventData()" />
+
+    <input type="button" value="动态事件1" onclick="document.ondblclick = DymicEvent()" />
+
+    <br />
+
+    <a href="http://www.baidu.com" onclick="RetuToBaidu()">跳转到Baidu(Href跳转，returnvalue取消)</a>
+
+    <br />
+
+    <input type="button" value="Windows-Confirm事件" onclick="document.ondblclick = ConfirmDemo()" />
+
+    <input type="button" value="Windows-Navigate" onclick="WindowsNaviga()" />
+
+    <input type="button" value="Altentaval定时更新" onclick="setintervalData()" />
+
+    <input type="button" value="停止Intalbale" onclick="clearInterval(intalid)" />
+
+    <input type="button" value="显示分辨率" onclick="ShowScreenPix()" />
+
+    <input type="button" value="document写入一行" onclick="DocWrite()" />
+
+    <p id="showinfo1">显示信息</p>
+
+    <p id="showinfo2">显示信息</p>
+
+    <p id="showinfo3">显示信息</p>
+
+    <p id="showinfo4">显示信息</p>
+
+    <p id="showinfo5">显示信息</p>
+
+    <p id="showinfo6">显示信息</p>
+
+    <p id="showinfo7">0</p>
+
+    <p id="showinfo8">显示信息</p>
+
+    <p id="showinfo9">TimeOut只执行一次，执行一次后就不执行了。ClearTimeout和Interval区别 间隔和超时</p>
+
+    <p id="showinfo10">显示信息</p>
+
+    <p id="showinfo11">显示信息</p>
+
+    <p id="showinfo12">显示信息</p>
+
+    <p id="showinfo13">显示信息</p>
+
+    <p id="showinfo14">显示信息</p>
+
+    <script type="text/javascript">
+
+        document.write("<p> DocmentWrite使用" + Date().toString() + "</p>")
+
+
+        document.writeln("<p> DocmentWriteLn使用" + Date().toString() + "</p>")
+
+    </script>
+
+    <form id="form1" action="a.aspx">
+
+        <input type="button" value="提交" onclick="CheckData()" />  
+
+        <input id="txtContent" type="text" value="你好啊～" />
+
+        <input type="button" value="设置粘贴板内容" onclick="SetClipBord()" />
+
+        <input type="button" value="Form表单设置" onclick="FormSet()" />
+
+        <input name="gender" type="radio" value="男"  />
+
+        <input name="gender" type="radio" value="女" />
+
+        <input name="gender" type="radio" value="未知" />
+
+        <input type="button" onclick="GetElementUseName()" value="GetElenmetByName" />
+
+        <input type="button" onclick="GetElementUseTargetName()" value="GetElenmetByTargetname" />
+
+    </form>
+
+</body>
+</html>
