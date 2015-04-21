@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="DefaultDOC.html" />
     <Content Include="DOM.html" />
+    <Content Include="DongtaiEvent.html" />
     <Content Include="js01.js" />
     <Content Include="Web.config" />
   </ItemGroup>

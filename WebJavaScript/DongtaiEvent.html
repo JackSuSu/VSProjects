@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript">
+
+        var leftSecond = 10;
+
+        function LoadEvent()
+        {
+            var inputs = document.getElementsByTagName("input");
+
+            for (var i = 0; i < inputs.length; i++) {
+
+                var input = inputs[i];
+
+                //input.onclick = btnClick;
+
+            }
+
+            inputs[0].className = "SelectedClass";
+
+            var dataid = setInterval("ConntDown()", 1000);
+
+        }
+
+        function btnClick()
+        {
+            var inputs = document.getElementsByTagName("input");
+
+            for (var i = 0; i < inputs.length; i++) {
+
+                var input = inputs[i];
+
+                //alert(input.value);
+
+                //alert(window.event.srcElement);
+
+                if (input == window.event.srcElement) {
+                    input.className = "SelectedClass";
+                } else { input.className = "CommonClass"; }
+
+               
+
+            }
+
+        }
+
+
+        function ConntDown()
+        {
+            var btnReg = document.getElementById("btnGree");
+            if (btnReg)
+            {
+                if (leftSecond == 0) {
+                    btnReg.value = "同意";
+                    btnReg.disabled = false;
+                    clearInterval(dataid)
+                } else {
+                    leftSecond--;
+                    btnReg.value = leftSecond;
+                }
+            }
+           
+
+        }
+
+        function GetResult()
+        {
+            var data1 = document.getElementById("par1").value;
+
+            var data2 = document.getElementById("par2").value;
+
+            var sumdata = document.getElementById("result");            
+
+            var sum = parseInt(data1, 10) + parseInt(data2, 10);
+
+            sumdata.value = sum;
+
+        }
+
+
+    </script>
+
+
+    <style type="text/css">
+
+        .SelectedClass {
+            color: red;
+        }
+
+        .CommonClass {
+        
+            color:green;
+        }
+
+
+    </style>
+
+
+</head>
+<body onload="LoadEvent()">
+
+
+    <h3>页面切换效果</h3>
+
+    <input value="1" type="button">
+
+    <input value="2" type="button">
+
+    <input value="3" type="button">
+
+    <input value="4" type="button">
+
+    <input value="5" type="button">
+
+    <input value="6" type="button">
+
+    <br />
+
+
+    <h3>注册倒计时案例</h3>
+
+    <input type="text" value="我同意以上协议1.不骂人2.不听话" />
+
+    <input value="确定" type="button" disabled="disabled" id="btnGree"  />
+
+    <h3>加法计算器</h3>
+
+    <input type="text" id="par1" />
+
+    <br />
+
+    <input type="text" id="par2" />
+
+    <br />
+
+    <input type="text" id="result" />
+
+    <br />
+
+    <input type="button" onclick="GetResult()" value="计算" />
+
+
+</body>
+</html>

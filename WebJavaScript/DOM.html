@@ -146,6 +146,10 @@
             var showinfo8 = document.getElementById("showinfo8");
 
             showinfo8.innerHTML = "Onload事件 当加载完页面元素后显示内容！Html JavaScript 是解释执行的";
+
+
+            initEvent();
+
         }
 
         function UnOnload()
@@ -210,6 +214,47 @@
                 showinfo13.innerText += radiaos[i].value;
             }
         }
+
+
+        function initEvent()
+        {
+            var inputs = document.getElementsByTagName("h3");
+
+            for (var i = 0; i < inputs.length; i++) {
+
+                var input = inputs[i];
+
+                input.onclick = btClick();
+
+            }
+
+        }
+
+        function btClick( )
+        {
+            var inputs = document.getElementsByTagName("h3");
+
+            for (var i = 0; i < inputs.length; i++) {
+
+                var input = inputs[i];
+
+                if (input == window.event.srcElement) {
+                    input.innerHTML = "Changed";
+                } else
+                {
+                    input.innerHTML = "Unchanged";
+                }
+
+            }
+
+            //alert(input.innerHTML);
+        }
+
+        function HeaderClick()
+        {
+            alert("点击了");
+        }
+
 
 
     </script>
@@ -304,6 +349,21 @@
         <input type="button" onclick="GetElementUseTargetName()" value="GetElenmetByTargetname" />
 
     </form>
+
+
+    
+
+    <h3 onclick="HeaderClick()">标题1号</h3>
+
+    <h3>标题2号</h3>
+
+    <h3>标题3号</h3>
+
+    <h3>标题4号</h3>
+
+    <h3>标题5号</h3>
+
+    <h3>标题6号</h3>
 
 </body>
 </html>

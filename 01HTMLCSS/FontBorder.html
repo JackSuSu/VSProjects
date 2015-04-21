@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style type="text/css">
+
+        .fontborderstyle {
+            
+            font-family:DFKai-SB;
+
+            font-size:xx-large;
+
+            font-style:italic;
+
+            border-top:inset;
+
+            border-left:solid;
+
+            border-bottom:double;
+
+            font-weight:bolder;
+        }
+
+        .BgStyle {
+        
+
+        }
+
+
+        .div1 {
+        
+            height:100px;
+
+            width:300px;
+
+            border:solid;
+
+            margin:10px;
+
+            background:red;
+
+            position:absolute;
+
+            z-index:3;
+
+            /*绝对定位*/
+        }
+
+        .div2 {
+            height: 100px;
+            width: 300px;
+            border: solid;
+            margin: 20px;
+            position: absolute;
+            background: green;
+            z-index:2;
+        }
+
+
+        .div3 {
+            height: 100px;
+            width: 300px;
+            border: solid;
+            margin: 30px;
+            position: absolute;
+            background:yellow;
+            z-index:1;
+        }
+
+        .div4 {
+            width: 150px;
+            height: 100px;
+            /*position: absolute;*/
+         
+            position: fixed;
+            /*固定位置*/
+            bottom: 0px;
+            right: 0px;
+            background: lightgray;
+        }
+
+
+        .div5 {
+        
+            height:100px;
+
+            width:150px;
+
+            background:gray;
+        }
+
+        .pdata {
+        
+            word-spacing:20px;
+
+            letter-spacing:1px;
+
+            text-decoration:line-through;
+
+            text-align:center;
+
+            text-indent:15px;
+
+            line-height:40px;
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <p class="fontborderstyle">我要发财，我要挣钱，我要发财！(font/border属性)</p>
+
+
+    <p>
+
+        文档流的概念：HTML显示规则所有的内容，从上往下 从左向右依次排列 没有任何原色是重合的 。
+
+        DIV是文档流，默认的占一行，从上往下，如果想要横向重叠怎么办？<br />
+
+        让DIV脱离文档流控制
+
+        固定位置：定在那里，就是那里，绝对定位
+
+        显示顺序：Z-index
+
+    </p>
+
+
+    <div>
+
+
+        <div class="div1">
+
+        </div>
+
+        <div class="div2">
+
+        </div>
+
+        <div class="div3">
+
+        </div>
+
+
+    </div>
+
+    <div class="div5">
+
+    </div>
+
+
+    <div class="div4">
+
+        <p>恭喜您你已经抽奖中了Iphone（DIV Position Fixed属性）</p>
+
+    </div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <p>文本内容包括：文字间距，对齐方式，上标，下标，排列方式，首行缩进</p>
+
+    <p class="pdata">Welcome to China!(Word-spaceing,letter-spacing,text-align:center,首行缩进：text-indent,text-lineheight 行高)</p>
+
+
+    <hr/>
+
+    <h3>DIV 盒子</h3>
+
+    <p>Margin 盒子和其他盒子之间的距离，Pading盒子内部 的布局 Boder是盒子的边框。</p>
+
+    <div>
+
+    </div>
+
+</body>
+</html>
