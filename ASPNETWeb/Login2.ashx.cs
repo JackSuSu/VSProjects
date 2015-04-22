@@ -28,12 +28,23 @@ namespace ASPNETWeb
               
                 var data=new  {username="zhangsan",password="123456"};
 
-                string html = NVelcityHelper.GetHtml("login.html", data);
+                //string html = NVelcityHelper.GetHtml("login.html", data);
 
-                context.Response.Write(html);
-
+                //context.Response.Write(html);
           
             }
+
+            var users = SQLHelp.ExcuteDataTable("select * from TbUser", null);
+
+            var groups = SQLHelp.ExcuteDataTable("select * from TbGroup",null);
+
+            var datas = new { persons = users.Rows, classes = groups.Rows };
+
+            string html = NVelcityHelper.GetHtml("ShowUsers.html", datas);
+
+            context.Response.Write(html);
+
+            
 
         }
 

@@ -1,0 +1,23 @@
+﻿#include("head.html")
+
+#foreach($p in $data.persons)
+<p>
+    $p.Uid | $p.UName | $p.UPwd |
+
+    #foreach($class in $data.classes)
+
+    #if($class.Gid==$p.UGid)
+
+    <strong>$class.GName</strong>
+
+    #end
+
+    #end
+
+</p>
+
+#end
+
+
+
+#include("foot.html")
