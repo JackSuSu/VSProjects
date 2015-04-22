@@ -44,6 +44,10 @@ namespace ASPNETWeb
 
             context.Response.Write(html);
 
+            //HttpCookie cookes = new HttpCookie("rePwd");
+
+          
+
             
 
         }
