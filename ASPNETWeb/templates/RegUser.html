@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../AjaxJS.js"></script>
+
+    <script type="text/javascript">
+
+
+        function shwpainfo(data) {
+
+            var p = document.getElementById("pinfo");
+
+            var users = JSON.parse(data);
+
+            for (var i = 0; i < users.length; i++) {
+
+                p.innerHTML += users[i].Id + "|" + users[i].Name + "|" + users[i].Age + "<br />" ;
+
+            }
+
+           
+            p.appendChild("<br />")
+
+        }
+
+
+        function CheckUserName() {
+            var username = document.getElementById("usernamessss");
+
+            //var pwd = document.getElementById("pwd");
+
+            //alert(username.value);
+
+            ajax("CheckUser.ashx?username=" + username.value, shwpainfo, shwpainfo);
+
+
+        }
+
+
+    </script>
+    
+    
+</head>
+<body>
+   
+
+        用户名：<input id="usernamessss" type="text" name="username" onblur="CheckUserName()" />        
+
+        密码：<input id="pwd" type="password" name="pwd" />
+
+        <input type="submit" value="注册" />
+
+    
+
+    <p id="pinfo"></p>
+</body>
+</html>

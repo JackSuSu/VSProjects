@@ -23,9 +23,12 @@ namespace ASPNETWeb
 
             vltengine.Init();
 
-            NVelocity.VelocityContext vltcontext = new NVelocity.VelocityContext();         
+            NVelocity.VelocityContext vltcontext = new NVelocity.VelocityContext();
 
-            vltcontext.Put("data", Data);         
+            if (Data != null)
+            {
+                vltcontext.Put("data", Data);        
+            }          
 
             Template vlttemplate = vltengine.GetTemplate(templatename);
 
