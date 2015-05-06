@@ -22,6 +22,39 @@ namespace MVCFirst
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Application["PageClick"] = 0;
+
+            Application["UserVisit"] = 0;
+
         }
+
+        protected void Session_Start(object sender, EventArgs e)
+        {
+
+            Application.Lock();
+
+            Application["UserVisit"] = (int)Application["UserVisit"] + 1;
+
+            Application.UnLock();
+
+        }
+
+
+        protected void Session_End(object sender, EventArgs e)
+        {
+
+            // 在会话结束时运行的代码
+
+            // 注意: 只有在 Web.config 文件中的 sessionstate 模式设置为InProc 时，才会引发 Session_
+
+            var ttt = 10;
+
+            // 如果会话模式设置为 StateServer 或 SQLServer，则不会引发该事件
+
+        }
+
+
+
     }
 }

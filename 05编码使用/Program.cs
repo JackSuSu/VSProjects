@@ -47,13 +47,15 @@ namespace _05编码使用
             
             
 
-            string strdingdata = "藏";
+            string strdingdata = "123456藏雪花";
 
             byte[] databyte = Encoding.UTF8.GetBytes(strdingdata);
 
             string resultdata = Encoding.UTF8.GetString(databyte);
 
             Console.WriteLine(resultdata);
+
+            Console.WriteLine(databyte.Length);
 
 
             #endregion

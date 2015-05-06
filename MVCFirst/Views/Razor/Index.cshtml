@@ -14,6 +14,66 @@
         <h3>Razor视图引擎</h3>
         <h5>@DateTime.Now.ToString()</h5>
         <h5>@ViewData["date"] </h5>
+        <h5>@ViewData["userid"]</h5>
+        <h5>@ViewData["Cookie"]</h5>
+        
+
+      
+        
+
+     @for (int i = 0; i < 10; i++)
+     {
+         @i;
+     }
+
+        @if (ViewData.Count > 0)
+        {
+             <p>VIewData是有数据的 @ViewData.Count </p>
+        }
+        else 
+        {
+            <p>VIewData是没有数据的</p>
+        }
+
+        @{
+            
+            int index = 10;
+
+            int j = 10;
+            
+            
+            
+            <p>@(index + j)</p>
+            
+        }
+
+
+        @{ string str="<script>alert('Hi');</script>";
+               
+           
+           <p>@str</p>
+               
+               @*<p>@Html.Raw(str)</p>*@
+               
+               }
+         
+          <p>Razor数据转换</p>
+
+
+        @{
+            
+            string str3 = "1234";
+            
+            <p>IsINt @str3.IsInt()</p>
+            
+            <p>AsInt使用 @str3.AsInt()</p>
+            
+        }
+
+
+        <h5>@ViewData["allvist"]</h5>
+
+
     </div>
 </body>
 </html>

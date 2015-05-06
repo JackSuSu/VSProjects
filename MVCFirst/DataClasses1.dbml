@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TestDb" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.102.244;Initial Catalog=TestDb;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TestDbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TbUser" Member="TbUser">
+    <Type Name="TbUser">
+      <Column Name="UId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UPwd" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UGId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TbGroup_TbUser" Member="TbGroup" ThisKey="UGId" OtherKey="GId" Type="TbGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TbGroup" Member="TbGroup">
+    <Type Name="TbGroup">
+      <Column Name="GId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="TbGroup_TbUser" Member="TbUser" ThisKey="GId" OtherKey="UGId" Type="TbUser" />
+    </Type>
+  </Table>
+</Database>
