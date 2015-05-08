@@ -19,7 +19,7 @@ namespace _30NETLib
 
     class Program
     {
-        static void Main(string[] args)
+        static void Mains(string[] args)
         {
 
             #region 代码

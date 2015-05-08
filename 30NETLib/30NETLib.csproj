@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="01Thread.cs" />
+    <Compile Include="02Attribute.cs" />
+    <Compile Include="03Sync异步.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
